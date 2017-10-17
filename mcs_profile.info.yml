@@ -1,0 +1,19 @@
+name: 'Managed Content Service'
+type: profile
+description: 'Acquia MCS installation profile.'
+version: '1.0.0-dev'
+core: 8.x
+package: 'Managed Content Service'
+distribution:
+  name: 'Managed Content Service'
+dependencies:
+  - mcs_core
+  - mcs_user
+  - mcs_ui
+  - openid_connect
+  - material_admin_support
+themes:
+  - material_admin
+'base profile':
+  name: headless_lightning
+  excluded_dependencies: {}

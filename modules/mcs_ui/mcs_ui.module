@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_toolbar().
+ */
+function mcs_ui_toolbar() {
+
+  $items['branding'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Acquia Managed Content Service'),
+      '#url' => Url::fromRoute('<front>'),
+      '#options' => [
+        'set_active_class' => FALSE,
+      ],
+    ],
+    '#weight' => -100,
+  ];
+
+  return $items;
+}

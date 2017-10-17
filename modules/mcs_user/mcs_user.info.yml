@@ -1,0 +1,8 @@
+name: 'Managed Content Service Core'
+core: 8.x
+type: module
+package: Acquia Managed Content Service
+description: 'Users and roles for Acquia MCS.'
+version: '1.0.0-dev'
+dependencies:
+  - mcs_core

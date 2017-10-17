@@ -1,0 +1,16 @@
+{% if label.value %}
+  <h2{{ title_attributes }}>
+    <a href="{{ url }}">{{ label }}</a>
+  </h2>
+{% endif %}
+
+{% if display_submitted %}
+  <div class="content-meta">
+    <div{{ author_attributes.addClass('content-published') }}>
+    {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+    {{ metadata }}
+    </div>
+  </div>
+{% endif %}
+
+{{ content }}

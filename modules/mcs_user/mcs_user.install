@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ */
+function mcs_user_install() {
+  // Add a user with the MCS Admin role so you can start using the app
+  // immediately.
+  $edit = [
+    'name' => 'MCS Admin',
+    'mail' => 'mcs-admin@example.com',
+    'pass' => 'admin',
+  ];
+  $account = User::create($edit);
+  $account->addRole('mcs_admin');
+  $account->activate();
+  $account->save();
+}
