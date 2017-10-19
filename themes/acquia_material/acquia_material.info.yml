@@ -1,0 +1,23 @@
+name: Acquia Material
+type: theme
+description: 'Adds Acquia colors and logos to the Material Admin theme.'
+core: 8.x
+
+libraries:
+  - acquia_material/global-styling
+
+base theme: material_admin
+
+regions:
+  header: 'Header'
+  status: 'Status area'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
