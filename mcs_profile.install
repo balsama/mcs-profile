@@ -15,8 +15,8 @@ function mcs_profile_install() {
 
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'material_admin')
-    ->set('admin', 'material_admin')
+    ->set('default', 'acquia_material')
+    ->set('admin', 'acquia_material')
     ->save();
 
 }

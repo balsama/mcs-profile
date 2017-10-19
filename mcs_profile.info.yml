@@ -13,7 +13,7 @@ dependencies:
   - openid_connect
   - material_admin_support
 themes:
-  - material_admin
+  - acquia_material
 'base profile':
   name: headless_lightning
   excluded_dependencies: {}

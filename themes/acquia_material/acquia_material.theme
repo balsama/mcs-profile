@@ -1,0 +1,7 @@
+<?php
+
+function acquia_material_theme_suggestions_block_alter(&$suggestions, $variables) {
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('acquia_material_', 'material_admin_', $suggestion);
+  }
+}
