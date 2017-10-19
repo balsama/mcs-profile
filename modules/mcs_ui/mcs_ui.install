@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function mcs_ui_install() {
+  // Disable the Configuration and Help links in the toolbar.
+  $disables = [
+    'system.admin_config',
+    'help.main'
+  ];
+  foreach ($disables as $disable) {
+    /* @var $menu_link Drupal\Core\Menu\MenuLinkDefault */
+    $menu_link = \Drupal::service('plugin.manager.menu.link')
+      ->createInstance($disable);
+    $menu_link->updateLink(['enabled' => 0], TRUE);
+  }
+}
